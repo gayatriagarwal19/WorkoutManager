@@ -59,7 +59,8 @@ const updateWorkout = async (req, res) => {
     { _id: id },
     {
       ...req.body,
-    }
+    },
+    { new: true }
   );
 
   if (!workout) {
